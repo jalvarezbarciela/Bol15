@@ -5,6 +5,7 @@
  */
 package bol15;
 import personal.*;
+import nota1aval.Calculo;
 /**
  *
  * @author jalvarezbarciela
@@ -13,9 +14,12 @@ public class Academica {
     static int numReferencia=2020;
     private String nome;
     private int nota;
-       Persoal alum=new Persoal();
+    private int referencia;
+    Calculo nota1=new Calculo();
+    private Persoal alum=new Persoal();
 
     public Academica(String nome, int nota,String telefono,String correo) {
+        referencia=numReferencia;
         this.nome = nome;
         this.nota = nota;
         alum.setTeléfono(telefono);
@@ -49,7 +53,7 @@ public class Academica {
 
     @Override
     public String toString() {
-        return "nome=" + nome + ", nota=" + nota + ", referencia=" + numReferencia + alum.toString();
+        return "nome=" + nome + ", nota=" + nota + ", referencia=" + referencia +" "+ alum.toString();
     }
     
     
